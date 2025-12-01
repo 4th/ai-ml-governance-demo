@@ -185,20 +185,51 @@ The architecture is intentionally modular so each layer can be scaled, swapped, 
 
 ```mermaid
 flowchart LR
-    U[User<br/>Browser] -->|HTTP| UI[Streamlit UI]
+    %% Nodes
+    U["User / Browser"]
+    UI["Streamlit UI"]
+    API["FastAPI Service"]
+    MODEL["Sklearn Model (RandomForest)"]
+    RAG["RAG Pipeline"]
+    KB["Knowledge Base (JSON / Future Vector Store)"]
+    LLM["LLM Client (OpenAI / Azure OpenAI)"]
+    LOG["Logging & Metrics"]
 
-    UI -->|REST calls| API[FastAPI Service]
+    %% Edges
+    U -->|HTTP| UI
+    UI -->|REST calls| API
 
-    API -->|/predict| MODEL[Sklearn Model<br/>(RandomForest)]
-    API -->|/rag| RAG[RAG Pipeline]
+    API -->|/predict| MODEL
+    API -->|/rag| RAG
 
-    RAG --> KB[Knowledge Base<br/>(JSON / future vector store)]
-    RAG --> LLM[LLM Client<br/>(OpenAI / Azure OpenAI)]
+    RAG --> KB
+    RAG --> LLM
 
-    API --> LOG[Logging & Metrics]
+    API --> LOG
     MODEL --> LOG
     RAG --> LOG
     LLM --> LOG
+
+    %% Classes
+    classDef userNode fill:#ffcc00,stroke:#b58900,stroke-width:2px,color:#000,font-weight:bold;
+    classDef uiNode fill:#00c4ff,stroke:#006d8f,stroke-width:2px,color:#000,font-weight:bold;
+    classDef apiNode fill:#ff6b6b,stroke:#b22222,stroke-width:2px,color:#000,font-weight:bold;
+    classDef modelNode fill:#4caf50,stroke:#1b5e20,stroke-width:2px,color:#000,font-weight:bold;
+    classDef ragNode fill:#9b59b6,stroke:#512e5f,stroke-width:2px,color:#000,font-weight:bold;
+    classDef kbNode fill:#f39c12,stroke:#b9770e,stroke-width:2px,color:#000,font-weight:bold;
+    classDef llmNode fill:#3498db,stroke:#1f618d,stroke-width:2px,color:#000,font-weight:bold;
+    classDef logNode fill:#ecf0f1,stroke:#7f8c8d,stroke-width:2px,color:#000,font-weight:bold;
+
+    %% Apply classes
+    class U userNode;
+    class UI uiNode;
+    class API apiNode;
+    class MODEL modelNode;
+    class RAG ragNode;
+    class KB kbNode;
+    class LLM llmNode;
+    class LOG logNode;
+
  ```
  ---
 
