@@ -2126,3 +2126,16 @@ Section 12 provides a clear roadmap for turning this portfolio project into a fu
 - Multi-agent generative AI systems  
 - Full governance and compliance lifecycle  
 
+## 🧑‍💻 Author & Project Ownership
+
+This repository is the original work of **Dr. Freeman A. Jackson** (GitHub: [@4th](https://github.com/4th)).
+
+It was intentionally designed and implemented as a **hands-on, end-to-end technical demonstration** for a **Senior AI/ML Engineer role (Transcend Staffing / Federal Client)** and showcases:
+
+- Full-stack AI/ML engineering from **data → model → API → UI → deployment**
+- Integration of **classical ML**, **LLM-powered RAG**, and **governance / observability** patterns
+- Production-minded use of **FastAPI, Streamlit, Docker, Databricks-style workflows, and logging**
+- A governance-ready architecture aligned with **enterprise and federal AI risk, compliance, and safety expectations**
+
+All code, architecture, documentation, and design patterns in this project were authored solely by **Dr. Jackson** for professional portfolio and evaluation purposes.  
+This repository is **not** an official product of any employer, client, or agency, and no proprietary or confidential data or code is used.
