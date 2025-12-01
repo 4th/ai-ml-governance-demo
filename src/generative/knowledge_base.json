@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "AI Governance Basics",
+    "content": "AI governance involves risk management, compliance frameworks, and responsible deployment of artificial intelligence models in line with standards such as NIST AI RMF and ISO/IEC 42001."
+  },
+  {
+    "id": 2,
+    "title": "ML Model Lifecycle",
+    "content": "The ML model lifecycle includes data collection, preprocessing, training, evaluation, deployment, monitoring, and eventual retirement or retraining."
+  },
+  {
+    "id": 3,
+    "title": "Model Monitoring",
+    "content": "Model monitoring involves tracking performance metrics, data drift, concept drift, and ensuring that the model remains within acceptable risk and accuracy thresholds."
+  }
+]
